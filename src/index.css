@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Clean headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-gray-900 tracking-tight;
+  }
+}
+
+/* Subtle clean scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom styles for print & forms */
+input, select, textarea {
+  @apply transition-colors;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
