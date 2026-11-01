@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Food Wastage Prevention & Surplus Redistribution System
 
 A production-grade, full-stack AI-driven web application integrating a **React 19 + TypeScript Frontend**, **FastAPI REST Backend**, **SQLite Relational Database**, and a **Scikit-Learn Machine Learning Engine** trained on the official `AI food wastage System` dataset.
@@ -124,3 +125,6 @@ npm run dev
 - **Complete 3-Tier Architecture**: Clean presentation of Client (React 19), Server (FastAPI), and Database (SQLite relational persistence).
 - **Real Dataset Implementation**: Examiners can browse through the 1,000 providers and 1,000 receivers directly inside the **Admin Dashboard -> Dataset & SQLite DB Explorer** tab.
 - **Explainable ML**: Trained pipeline with documented $R^2$ validation score, feature importance, and interactive prediction interface in **AI Optimization -> ML Food Wastage Predictor**.
+=======
+
+>>>>>>> 0fc5e8ae1a79071f52868c05eb8c7e34cbdb04d1
