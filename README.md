@@ -1,19 +1,22 @@
 # AI Food Wastage Prevention & Surplus Redistribution System
 
 A production-grade, full-stack AI-driven web application integrating a **React 19 + TypeScript Frontend**, **FastAPI REST Backend**, **SQLite Relational Database**, and a **Scikit-Learn Machine Learning Engine** trained on the official `AI food wastage System` dataset.
-                       Frontend - https://ai-food-wastage.vercel.app/
-                       Backend  -https://ai-food-wastage.onrender.com
+
+**Live Demo:** https://ai-food-wastage.vercel.app/ | https://ai-food-wastage.onrender.com
+
 ---
 
-## 🌟 Architecture & Full-Stack Integration
-'''
+## Architecture & Full-Stack Integration
 
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                       React Frontend                        │
 │         (Vite, TypeScript, Tailwind CSS, Recharts)          │
 │       Role Dashboards: Restaurant | NGO | Courier | Admin   │
 └──────────────────────────────▲──────────────────────────────┘
-                               │  REST API & Live Proxy (/api)
+                               │
+                      REST API & Live Proxy (/api)
+                               │
 ┌──────────────────────────────▼──────────────────────────────┐
 │                      FastAPI Backend                        │
 │          Endpoints: Donations, Claims, Pickups, AI          │
@@ -28,11 +31,4 @@ A production-grade, full-stack AI-driven web application integrating a **React 1
 │  - 1,000 Claims             ││  - CO₂ emission forecasting  │
 │  - Active & Past Donations  ││  - Prevention heuristics     │
 └─────────────────────────────┘└──────────────────────────────┘
-
-'''
-
-
-
-
-
-
+```
