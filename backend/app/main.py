@@ -8,6 +8,8 @@ from typing import Optional, List
 
 from fastapi import FastAPI, HTTPException, Query, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 # Add parent directory to sys.path so database and app packages resolve cleanly
@@ -650,4 +652,22 @@ def get_dataset_receivers(page: int = 1, limit: int = 20, search: Optional[str] 
         cursor.execute(query, params)
         rows = cursor.fetchall()
         return [dict(r) for r in rows]
+
+# ----------------- PRODUCTION STATIC SERVING -----------------
+# When dist/ exists (after npm run build), serve the React frontend directly from FastAPI
+DIST_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "dist")
+if os.path.exists(DIST_DIR) and os.path.exists(os.path.join(DIST_DIR, "index.html")):
+    assets_dir = os.path.join(DIST_DIR, "assets")
+    if os.path.exists(assets_dir):
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="static-assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_react_frontend(full_path: str):
+        if full_path.startswith("api/") or full_path.startswith("docs") or full_path.startswith("openapi.json"):
+            raise HTTPException(status_code=404, detail="Endpoint not found")
+        requested_file = os.path.join(DIST_DIR, full_path)
+        if os.path.isfile(requested_file):
+            return FileResponse(requested_file)
+        return FileResponse(os.path.join(DIST_DIR, "index.html"))
+
 

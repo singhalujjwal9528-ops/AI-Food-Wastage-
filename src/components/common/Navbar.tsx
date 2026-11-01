@@ -51,11 +51,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-xs">
-      {/* Top Student Notice / Demo Bar */}
+      {/* Top Bar */}
       <div className="bg-green-50 border-b border-green-100 px-4 py-1.5 text-xs text-green-900 flex flex-wrap items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-semibold px-1.5 py-0.5 rounded bg-green-200 text-green-800 text-[11px]">B.Tech Final Project</span>
-          <span className="hidden sm:inline">AI-Assisted Food Surplus Redistribution System</span>
+          <span className="font-semibold text-green-900">AI Food Surplus Redistribution Platform</span>
           <div className="flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium border bg-white shadow-2xs">
             <span className={`w-2 h-2 rounded-full ${backendOnline ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
             <span className="text-gray-700">{backendOnline ? 'FastAPI + SQLite: Online' : 'Connecting Backend...'}</span>

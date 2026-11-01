@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: ai_food_waste_platform
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    volumes:
+      - sqlite_data:/app/backend
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:
+

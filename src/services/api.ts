@@ -1,6 +1,6 @@
 import { FoodDonation, PickupTask, NotificationItem, PlatformStats } from '../types';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_BASE_URL ? import.meta.env.VITE_API_BASE_URL.replace(/\/$/, '') : '') + '/api';
 
 export interface WastagePredictionInput {
   type_of_food: string;
