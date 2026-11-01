@@ -1,7 +1,8 @@
 # AI Food Wastage Prevention & Surplus Redistribution System
 
 A production-grade, full-stack AI-driven web application integrating a **React 19 + TypeScript Frontend**, **FastAPI REST Backend**, **SQLite Relational Database**, and a **Scikit-Learn Machine Learning Engine** trained on the official `AI food wastage System` dataset.
-
+Frontend - https://ai-food-wastage.vercel.app/
+Backend  -https://ai-food-wastage.onrender.com
 ---
 
 ## 🌟 Architecture & Full-Stack Integration
