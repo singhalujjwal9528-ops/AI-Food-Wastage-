@@ -5,7 +5,7 @@ A production-grade, full-stack AI-driven web application integrating a **React 1
 ---
 
 ## 🌟 Architecture & Full-Stack Integration
-
+'''
 
 ┌─────────────────────────────────────────────────────────────┐
 │                       React Frontend                        │
@@ -28,7 +28,7 @@ A production-grade, full-stack AI-driven web application integrating a **React 1
 │  - Active & Past Donations  ││  - Prevention heuristics     │
 └─────────────────────────────┘└──────────────────────────────┘
 
-
+'''
 
 
 
