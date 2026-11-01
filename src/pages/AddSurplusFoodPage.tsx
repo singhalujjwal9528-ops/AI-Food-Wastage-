@@ -40,7 +40,7 @@ export const AddSurplusFoodPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [publishedId, setPublishedId] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!foodName || quantity <= 0) {
@@ -55,8 +55,8 @@ export const AddSurplusFoodPage: React.FC = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      const newId = addDonation({
+    try {
+      const newId = await addDonation({
         foodName,
         category,
         quantity,
@@ -72,9 +72,12 @@ export const AddSurplusFoodPage: React.FC = () => {
         dietaryType,
       });
 
-      setIsSubmitting(false);
       setPublishedId(newId);
-    }, 500);
+    } catch {
+      // Handled in context toast
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

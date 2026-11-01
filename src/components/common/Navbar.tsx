@@ -17,7 +17,7 @@ import {
 import { UserRole } from '../../types';
 
 export const Navbar: React.FC = () => {
-  const { currentUser, switchRole, notifications } = useApp();
+  const { currentUser, switchRole, notifications, backendOnline } = useApp();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [roleDropdownOpen, setRoleDropdownOpen] = useState(false);
   const navigate = useNavigate();
@@ -56,6 +56,10 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-2">
           <span className="font-semibold px-1.5 py-0.5 rounded bg-green-200 text-green-800 text-[11px]">B.Tech Final Project</span>
           <span className="hidden sm:inline">AI-Assisted Food Surplus Redistribution System</span>
+          <div className="flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium border bg-white shadow-2xs">
+            <span className={`w-2 h-2 rounded-full ${backendOnline ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
+            <span className="text-gray-700">{backendOnline ? 'FastAPI + SQLite: Online' : 'Connecting Backend...'}</span>
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-gray-600">Active City: <strong>Bengaluru, KA</strong></span>

@@ -1,0 +1,66 @@
+{
+  "model_name": "Food Wastage Predictor (Random Forest Regressor)",
+  "r2_score": 0.9254,
+  "mae_kg": 1.6256,
+  "rmse_kg": 2.7809,
+  "total_training_samples": 1782,
+  "categorical_options": {
+    "Type of Food": [
+      "Baked Goods",
+      "Dairy Products",
+      "Fruits",
+      "Meat",
+      "Vegetables"
+    ],
+    "Event Type": [
+      "Birthday",
+      "Corporate",
+      "Social Gathering",
+      "Wedding"
+    ],
+    "Storage Conditions": [
+      "Refrigerated",
+      "Room Temperature"
+    ],
+    "Purchase History": [
+      "Occasional",
+      "Regular"
+    ],
+    "Seasonality": [
+      "All Seasons",
+      "Summer",
+      "Winter"
+    ],
+    "Preparation Method": [
+      "Buffet",
+      "Finger Food",
+      "Sit-down Dinner"
+    ],
+    "Geographical Location": [
+      "Rural",
+      "Suburban",
+      "Urban"
+    ],
+    "Pricing": [
+      "High",
+      "Low",
+      "Moderate"
+    ]
+  },
+  "feature_names": {
+    "categorical": [
+      "Type of Food",
+      "Event Type",
+      "Storage Conditions",
+      "Purchase History",
+      "Seasonality",
+      "Preparation Method",
+      "Geographical Location",
+      "Pricing"
+    ],
+    "numerical": [
+      "Number of Guests",
+      "Quantity of Food"
+    ]
+  }
+}
